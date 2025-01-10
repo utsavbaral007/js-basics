@@ -103,7 +103,6 @@ function filterEvenOrOdd(type) {
 }
 filterEvenOrOdd("odd");
 
-
 //sum of all elements
 function sum() {
   const sumArr = [1, 2, 3, 4, 5];
@@ -114,3 +113,14 @@ function sum() {
   console.log(sum);
 }
 sum();
+
+//find the missing number
+const missingNumber = () => {
+  const arr = [1, 2, 4, 5, 6];
+  const n = arr.length + 1;
+  const expectedSum = (n * (n + 1)) / 2;
+  const actualSum = arr.reduce((acc, curr) => acc + curr, 0);
+  return expectedSum - actualSum;
+};
+
+console.log(`The missing number is ${missingNumber()}`);
