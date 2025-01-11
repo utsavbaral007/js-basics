@@ -124,3 +124,22 @@ const missingNumber = () => {
 };
 
 console.log(`The missing number is ${missingNumber()}`);
+
+
+
+//find all the pairs with given sum
+function pair(sum){
+  const pairArr = [1, 2, 3, 4, 5]
+  let newPairArr = []
+  for(let i = 0; i<= pairArr.length - 1; i++){
+    for(let j = i + 1; j<pairArr.length; j++){
+      if(j >= pairArr.length){
+        newPairArr = [...newPairArr]
+      } else if(pairArr[i] + pairArr[j] === sum){
+        newPairArr = [...newPairArr, [pairArr[i], pairArr[j]]]
+      }
+    }
+  }
+  console.log(newPairArr)
+}
+pair(4)
