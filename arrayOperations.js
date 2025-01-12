@@ -143,3 +143,20 @@ function pair(sum){
   console.log(newPairArr)
 }
 pair(4)
+
+
+//Rotate an array k times to the right
+function rotateArr(rot){
+  const rotArr = [1, 2, 3, 4, 5]
+  let newRotArr = []
+  for(let i = 0; i<rotArr.length; i++){
+    if(i+rot > rotArr.length - 1){
+      let index = (i+rot) - rotArr.length
+      newRotArr[index] = rotArr[i]
+    } else {
+      newRotArr[i+rot] = rotArr[i]
+    }
+  }
+  console.log(newRotArr)
+}
+rotateArr(1)
