@@ -160,3 +160,23 @@ function rotateArr(rot){
   console.log(newRotArr)
 }
 rotateArr(1)
+
+
+//Sort an array
+function sortArr(){
+  let sortArray = [10, 13, 25, 40, 30, 8, 6, 15]
+  for (i = 0; i<sortArray.length; i++){
+    for (let j = i + 1; j<sortArray.length; j++){
+      if(sortArray[i] - sortArray[j] > 0){
+        let compareElement = sortArray[i]
+        sortArray[i] = sortArray[j]
+        sortArray[j] = compareElement
+      } else {
+        sortArray[i] = sortArray[i]
+        sortArray[j] = sortArray[j]
+      }
+    }
+  }
+  console.log(sortArray)
+}
+sortArr()
